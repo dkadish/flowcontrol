@@ -1,0 +1,144 @@
+:root {
+  --isabelline: #f2efeaff;
+  --coral: #fc7753ff;
+  --tiffany-blue: #66d7d1ff;
+  --english-violet: #403d58ff;
+  --straw: #dbd56eff;
+
+  --background-color: var(--tiffany-blue);
+  --light: var(--isabelline);
+  --accent-dark: var(--english-violet);
+  --rock: var(--coral);
+  --folk: var(--straw);
+  --country: var(--english-violet);
+  --reggae: var(--tiffany-blue);
+}
+
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--background-color);
+  margin: 25px;
+}
+.content {
+  display: flex;
+}
+.parent {
+  margin: 25px;
+}
+.container {
+  width: 425px;
+  padding: 25px;
+  background: var(--light);
+  border-radius: 7px;
+  padding: 30px 25px 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.container .item {
+  list-style: none;
+  cursor: move;
+  background: var(--light);
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px 13px;
+  margin-bottom: 11px;
+  /* box-shadow: 0 2px 4px rgba(0,0,0,0.06); */
+  border: 1px solid #ccc;
+  justify-content: space-between;
+}
+.item .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item .details img {
+  height: 43px;
+  width: 43px;
+  pointer-events: none;
+  margin-right: 12px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.item .details .songartist{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 5;
+}
+.item .details .durationgenre{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.item .details span.songtitle{
+  font-size: 1.13rem;
+}
+.item .details span.artist{
+  font-size: 1rem;
+}
+.item .details span.duration{
+  font-size: 0.75rem;
+}
+.item .details span.genre{
+  font-size: 0.75rem;
+  border-radius: 4px;
+  padding: 2px;
+  color: var(--light);
+}
+
+.item.dragging {
+  opacity: 0.6;
+}
+.item.dragging :where(.details, i) {
+  opacity: 0;
+}
+
+.playlist-head {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.button{
+  /*float: right;*/
+  background: var(--accent-dark);
+  font-size: 0.75rem;
+  border-radius: 4px;
+  margin-left: 10px;
+  padding: 5px;
+  color: var(--light);
+  cursor: pointer;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+  background-color: #111;
+}
